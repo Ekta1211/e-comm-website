@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+nav{
+    background-color: hsl(0, 0%, 100%);
+    margin: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav input{
+    display: none;
+}
+#close{
+    position: absolute;
+    top: 30px;
+    left: 25px;
+}
+#logo{
+    width: 10rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+}
+.menu {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.menu-item{
+    position: fixed;
+    height: 100vh;
+    top: 0px;
+    left: -300px;
+    width: 300px;
+    background-color: rgba(255,255,255,1);
+}
+.icon-cart{
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.avatar{
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-left: 0.8rem;
+}
+hr{
+    width: 80%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: hsl(223, 64%, 98%);
+    border: none;
+    /* display: none; */
+}
+ul{
+    padding-top: 100px;
+}
+li{
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+    padding-left: 25px;
+}
+/* =================     NAVBAR    =====================*/
+
+
+
+.mainImg{
+    /* margin: 0; */
+    width: 100%;
+    height: 100%;
+}
+.btn-pre, .btn-next{
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 60%;
+    position: absolute;
+    border: none;
+    margin-top: 50%;
+}
+.btn-next{
+    margin-left: 85%;
+}
+.thumbnailImg{
+    /* display: none; */
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    margin: 0 0 2rem 6rem;
+    position: absolute;
+    top: 55rem;
+}
+.thumbnail{
+    width: 100px;
+    border-radius: 15px;
+}
+.right-box{
+    margin-left: 1.5rem;
+}
+.right-box span{
+    display: inline-block;
+    color: hsl(219, 9%, 45%);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 18px;
+}
+.right-box h2{
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+.right-box p{
+    font-size: 14px;
+    color: hsl(217, 9%, 38%);
+    margin-right: 25px;
+    margin-bottom: 1.5rem;
+}
+.price{
+    margin-bottom: 1.5rem;
+    /* display: flex; */
+}
+#newPrice{
+    display: inline-block;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 700;
+    margin-right: 0.8rem;
+}
+#discount{
+    display: inline-block;
+    font-size: 1.05rem;
+    font-weight: 600;
+    background-color: black;
+    padding: 0.2rem 0.55rem;
+    border-radius: 5px;
+    color: white;
+}
+#oldPrice{
+    display: inline-block;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 500;
+    margin-left: 3.5rem;
+    color: hsl(214, 7%, 47%);
+}
+.order{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.qty{
+    width: 90%;
+    background-color: hsl(223, 64%, 95%);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    margin: 0 auto;
+}
+#minus{
+    margin-left: 1.3rem;
+    width: 1.3rem;
+    cursor: pointer;
+}
+#plus{
+    margin-right: 1.3rem;
+    width: 1.3rem;
+    cursor: pointer;
+}
+.qty span{
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+}
+.add-cart{
+    width: 90%;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 7px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding: 0.3rem;
+    transition: all 0.1s ease;
+    margin: 0 auto;
+}
+.add-cart span{
+    display: inline-block;
+    font-weight: 700;
+    margin-top: 0.8rem;
+    font-size: 1.15rem;
+    color: black;
+}
+.add-cart img{
+    margin-top: 0.8rem;
+    width: 1.2rem;
+}
+/*  =================   MAIN SECTION   ====================*/
+
+
+.cartBox{
+    width: 95%;
+    background-color: white;
+    position: absolute;
+    height: 250px;
+    left: 8px;
+    top: 105px;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    z-index: 1;
+    display: none;
+}
+.cartItem h3{
+    color: hsl(216, 9%, 21%);
+    font-size: 1.3rem;
+}
+.cartItem hr{
+    width: 100%;
+    margin: 0 auto;
+    height: 2px;
+    margin: 1rem 0;
+    background-color: hsl(230, 11%, 89%);
+    border: none;
+}
+.itemDetail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: none;
+}
+.itemDetail h3,.quantity, .amt{
+    color: hsl(210, 3%, 55%);
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+.paid{
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.itemDetail img{
+    width: 60px;
+    border-radius: 0.35rem;
+}
+#delBtn{
+    width: 25px;
+    margin-right: 0.5rem;
+}
+.cartBtn{
+    width: 100%;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 7px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    border: none;
+    font-weight: 600;
+    padding: 0.75rem;
+    transition: all 0.1s ease;
+    display: none;
+}
+.emptyCartMessage{
+    color: hsl(216, 7%, 28%);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+/*   ======================     ADD TO CART   ===============*/
+
+
+/*  ==================     HOVER EFFECT   =============*/
+.avatar:hover{
+    border: 2px solid hsl(26, 100%, 55%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.add-cart:hover{
+    box-shadow: hsl(25, 83%, 57%) 0px 5px 15px;
+    cursor: pointer;
+}
+.cartBox:hover{
+    cursor: pointer;
+}
+li:hover{
+    transform: scale(1.01);
+    color: hsl(216, 3%, 38%);
+    cursor: pointer;
+}
+.menu:hover{
+    cursor: pointer;
+}
+.thumbnail:hover{
+    /* filter: drop-shadow(hsl(25, 83%, 57%) 0px 5px 15px); */
+    box-shadow: hsl(25, 83%, 57%) 0px 5px 15px;
+    border: 2px solid hsl(25, 83%, 57%);
+    transition: all .3s ease;
+    opacity: 0.6;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+/*  ====================== MEDIA QUERY  =========================*/
+@media screen and (max-width: 1020px){
+    .thumbnailImg{
+        display: none;
+    }
+}
+@media screen and (min-width: 765px) and (max-width: 1020px){
+    .btn-next{
+        margin-left: 90%;
+    }
+    .order{
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    .add-cart{
+        width: 50%;
+    }
+    .qty{
+        width: 50%;
+    }
+    .cartBox{
+        width: 60%;
+        left: 15rem;
+    }
+}
+@media screen and (min-width: 1020px){
+    header{
+        width: 95%;
+        margin: 0 auto;
+    }
+    #close{
+        display: none;
+    }
+    #logo{
+        width: 12rem;
+        height: 1.8rem;
+        margin-left: 1.5rem;
+    }
+    .menu {
+        display: none;
+    }
+    .menu-item{
+        position: static;
+        height: 10%;
+        width: 50%;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+    .icon-cart{
+        width: 2rem;
+        height: 2rem;
+    }
+    .avatar{
+        width: 3rem;
+        height: 3rem;
+        margin-left: 1.2rem;
+    }
+    hr{
+        width: 90%;
+        margin: 0 auto;
+        height: 2px;
+        background-color: hsl(228, 6%, 84%);
+        border: none;
+        display: block;
+    }
+    li{
+        font-size: 22px;
+    }
+    .main{
+        display: flex;
+        margin: 10rem 5rem;
+    }
+    .mainImg{
+        border-radius: 1.5rem;
+    }
+    .btn-pre, .btn-next{
+        margin-top: 20%;
+    }
+    .btn-next{
+        /* position: absolute;
+        left: 0.5rem; */
+        margin-left: 25%;
+    }
+    .right-box{
+        /* margin-top: 0.2rem; */
+        margin-left: 4.5rem;
+    }
+    .right-box span{
+        margin-bottom: 1.2rem;
+        margin-top: 1rem;
+        font-size: 24px;
+    }
+    .right-box h2{
+        margin-bottom: 1.5rem;
+        font-size: 3.3rem;
+    }
+    .right-box p{
+        font-size: 20px;
+    }
+    .price{
+        margin-bottom: 1.5rem;
+        /* display: flex; */
+    }
+    #newPrice{
+        font-size: 2.2rem;
+        margin-right: 1.8rem;
+    }
+    #discount{
+        font-size: 1.8rem;
+    }
+    #oldPrice{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .order{
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    .add-cart{
+        width: 50%;
+    }
+    .qty{
+        width: 50%;
+    }
+    .cartBox{
+        width: 40%;
+        top: 8rem;
+        left: 40rem;
+    }
+}
+@media screen and (min-width: 1220px){
+    .cartBox{
+        width: 35%;
+        left: 48rem;
+    }
+    .btn-next, .btn-pre{
+        margin-top: 18%;
+    }
+    .btn-next{
+        margin-left: 26%;
+    }
+    .right-box{
+        margin-top: 4rem;
+        margin-left: 4.5rem;
+    }
+}
+@media screen and (min-width: 1500px){
+    .cartBox{
+        width: 35%;
+        left: 55rem;
+    }
+    .btn-next{
+        margin-left: 28%;
+    }
+    .right-box{
+        margin-top: 5.2rem;
+        margin-left: 4.5rem;
+    }
+}
